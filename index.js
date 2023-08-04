@@ -4,9 +4,9 @@ const data = {};
 data.countries = require('./countries.json');
 data.cities = require('./cities.json');
 data.states = require('./states.json');
+const cors = require('cors');
 
-
-
+app.use(cors({origin:'*'}))
 const app = express();
 const PORT = process.env.PORT || 5000;
 
